@@ -37,7 +37,6 @@ export default (state={}, action) => {
         return {...state, imagesArr: [], imageRenderCount: config.renderCount, pixabay: { fetching: false, fetched: false, error: false }, flickr: { fetching: false, fetched: false, error: false } };
     }
     case actions.ADD_RENDER_COUNT: {
-
         if((state.imageRenderCount + action.payload) > state.imagesArr.length)
             return { ...state, imageRenderCount: state.imagesArr.length }   
 
