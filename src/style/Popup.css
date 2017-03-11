@@ -1,9 +1,12 @@
-.popup{
+.popup {
     display: none;
     margin: auto;
     position: fixed;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background:#333;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #333;
 }
 
 .popup img {
@@ -16,7 +19,7 @@
     z-index: 10;
 }
 
-.popup .close{
+.popup .close {
     position: absolute;
     right: 20px;
     top: 15px;
@@ -28,12 +31,11 @@
     cursor: pointer;
 }
 
-.popup.show{
+.popup.show {
     display: block;
 }
 
-
-.popup .description{
+.popup .description {
     position: absolute;
     bottom: 0;
     width: 100%;

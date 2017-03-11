@@ -15,6 +15,7 @@ export const newSearch = () => {
 
 export const getImages = (term) => {
     return (dispatch, getState) => {
+        dispatch({type: actions.SEARCHED});   
         dispatch({type: actions.SET_VALUE, payload: term});   
         dispatch({type: actions.PIXABAY_FETCHING}); 
         pixabayCall(term)
@@ -57,7 +58,6 @@ export const addChar = (char) => {
 export const removeChar = () => {
     return { type: actions.REMOVE_CHAR }
 }
-
 
 export const clearHistory = () => {
     return { type: actions.CLEAR_HISTORY }

@@ -2,12 +2,12 @@
     padding: 5px;
 }
 
-.image img{
+.image img {
     max-width: 150px;
-    transition: all 0.2s ease-out; 
+    transition: all 0.2s ease-out;
     cursor: pointer;
 }
 
-.image img:hover{
+.image img:hover {
     transform: rotate(1deg);
 }

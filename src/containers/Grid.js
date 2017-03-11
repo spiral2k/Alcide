@@ -7,6 +7,8 @@ import '../style/Grid.css';
 const Grid = (props) => {
     let loader = (props.images.pixabay.fetching || props.images.flickr.fetching);
     let noResults = (!props.images.pixabay.fetching && !props.images.flickr.fetching && !props.images.imagesArr.length && !props.home);
+    let resultsCount = (!props.home);
+
 
     const renderImages = () => {
         return props.images.imagesArr.map((image) => {
@@ -22,6 +24,7 @@ const Grid = (props) => {
 
     return (
         <div className="images-grid"> 
+            <div className={"results-count " + (resultsCount ? "show" : "") }> <span>{props.input.text}</span> | { props.images.imagesArr.length } images found</div>
             { renderImages() } 
         </div>
     );
@@ -30,7 +33,8 @@ const Grid = (props) => {
 const mapStateToProps = (state) => {
         return {
                 images: state.images,
-                home: state.home
+                home: state.home,
+                input: state.input
         }
 }
 

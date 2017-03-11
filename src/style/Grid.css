@@ -1,4 +1,4 @@
-.images-grid{
+.images-grid {
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
@@ -7,10 +7,26 @@
     align-items: center;
 }
 
-.no-results{
+.no-results {
     font-size: 34px;
     width: 100%;
     margin-top: 55px;
     text-align: center;
     color: #ff0076;
+}
+
+.results-count {
+    display: none;
+    float: left;
+    width: 100%;
+    padding: 0 10px 15px 10px;
+    color: #ccc;
+}
+
+.results-count.show {
+    display: block;
+}
+
+.results-count span {
+    color: #aaa;
 }

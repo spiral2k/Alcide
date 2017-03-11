@@ -35,7 +35,7 @@ const Search = (props) => {
 
     return (
         <div className="search-container">
-            <div className={"back-home " + (!props.home ? "show": "")} onClick={backHome}>Back Home</div>
+            <div className={"back-home " + (!props.home ? "show": "")} onClick={backHome}>Back Home →</div>
             <Typist>
                 <span>Search</span> Images 
             </Typist>
