@@ -10,4 +10,5 @@
 
 .image img:hover {
     transform: rotate(1deg);
+    opacity: 0.8;
 }

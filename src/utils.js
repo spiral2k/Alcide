@@ -18,7 +18,7 @@ export const flickrCall = (term) => {
 export const pixabayCall = (term) => {
     return new Promise((resolve, reject) => {
         term = encodeURIComponent(term);
-        request.get(`${config.pixabay.url}?key=${config.pixabay.key}&q=${term}`).then((photos) => {            
+        request.get(`${config.pixabay.url}?key=${config.pixabay.key}&q=${term}&per_page=200`).then((photos) => {            
             resolve(JSON.parse(photos));
         }).catch((err) => {
             reject(err);
