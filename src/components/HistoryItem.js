@@ -8,7 +8,7 @@ const HistoryItem = (props) => {
             props.dispatch(closePopup());
             props.dispatch(closeSideMenu());
             props.dispatch(newSearch());
-            props.dispatch(getImages(term));
+            props.dispatch(getImages(term, false));
     }
 
     return ( <div className="history-item" onClick={historySearch}>

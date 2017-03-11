@@ -1,4 +1,5 @@
 import actions from '../actions/index';
+import config from '../config.json';
 
 export default (state={}, action) => {
   switch (action.type) {
@@ -27,13 +28,20 @@ export default (state={}, action) => {
             return {...state, history: [action.payload, ...state.history] };    
     }
     case actions.NEW_SEARCH: {
-            return {...state, imagesArr: [], pixabay: { fetching: false, fetched: false, error: false }, flickr: { fetching: false, fetched: false, error: false } };    
+            return {...state, imagesArr: [], imageRenderCount: config.renderCount, pixabay: { fetching: false, fetched: false, error: false }, flickr: { fetching: false, fetched: false, error: false } };    
     }
     case actions.CLEAR_HISTORY: {
         return {...state, history: []}
     }
     case actions.BACK_HOME: {
-        return {...state, imagesArr: [], pixabay: { fetching: false, fetched: false, error: false }, flickr: { fetching: false, fetched: false, error: false } };
+        return {...state, imagesArr: [], imageRenderCount: config.renderCount, pixabay: { fetching: false, fetched: false, error: false }, flickr: { fetching: false, fetched: false, error: false } };
+    }
+    case actions.ADD_RENDER_COUNT: {
+
+        if((state.imageRenderCount + action.payload) > state.imagesArr.length)
+            return { ...state, imageRenderCount: state.imagesArr.length }   
+
+        return { ...state, imageRenderCount: state.imageRenderCount + action.payload }
     }
 
     default: 

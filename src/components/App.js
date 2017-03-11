@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import reducers from '../reducers/index';
 import Index from '../containers/Index';
+import config from '../config.json';
 
 const middlewares = applyMiddleware(thunk, logger());
 
@@ -14,6 +15,7 @@ const initialState = {
     },
     images: {
       imagesArr: [],
+      imageRenderCount: config.renderCount,
       history: [],
       pixabay: {
         fetching: false,

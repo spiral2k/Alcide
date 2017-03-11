@@ -15,7 +15,7 @@ class Image extends Component {
     render() {
         return (
             <div className="image">
-                <img src={this.props.thumb} alt={this.props.alt} onClick={this.showPopup}/>
+                <img src={this.props.thumb} alt="" onClick={this.showPopup}/>
             </div>
         );
     }

@@ -13,7 +13,7 @@ export const newSearch = () => {
     return { type: actions.NEW_SEARCH }
 }
 
-export const getImages = (term) => {
+export const getImages = (term, withHistory) => {
     return (dispatch, getState) => {
         dispatch({type: actions.SEARCHED});   
         dispatch({type: actions.SET_VALUE, payload: term});   
@@ -37,11 +37,13 @@ export const getImages = (term) => {
                 dispatch({type: actions.FLICKR_ERROR});
                 console.log("Flickr error: ", err);
             }).then(() => {
+                if(withHistory){
                 const state = getState();
                 dispatch({type: actions.ADD_HISTORY_ITEM, payload: {  count: state.images.imagesArr.length,
-                                                                term: term,
-                                                                date: new Date() }
-                                                            });           
+                                                                        term: term,
+                                                                        date: new Date() }
+                                                                    });   
+                }        
             });
         })
     }
@@ -73,4 +75,12 @@ export const openPopup = (url, text) => {
 
 export const closePopup = () => {
     return { type: actions.CLOSE_POPUP }
+}
+
+export const loadMoreImages = (count) => {
+    return { type: actions.ADD_RENDER_COUNT, payload: count}
+}
+
+export const clearInput = () => {
+    return { type: actions.CLEAR_INPUT }
 }

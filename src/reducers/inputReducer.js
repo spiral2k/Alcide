@@ -2,6 +2,9 @@ import actions from '../actions/index';
 
 export default (state={}, action) => {
   switch (action.type) {
+    case actions.BACK_HOME: {
+        return {...state, text: ""};
+    }    
     case actions.SET_VALUE: {
         return {...state, text: action.payload, term: action.payload};
     }
@@ -11,10 +14,9 @@ export default (state={}, action) => {
     case actions.REMOVE_CHAR: {
         return { ...state, text: state.text.substring(0, state.text.length - 1) }
     }
-    case actions.BACK_HOME: {
+    case actions.CLEAR_INPUT: {
         return {...state, text: ""};
     }
-
     default: 
         return state;
     }  
