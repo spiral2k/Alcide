@@ -24,7 +24,7 @@ const Grid = (props) => {
 
     return (
         <div className="images-grid"> 
-            <div className={"results-count " + (resultsCount ? "show" : "") }> <span>{props.input.text}</span> | { props.images.imagesArr.length } images found</div>
+            <div className={"results-count " + (resultsCount ? "show" : "") }> <span>{props.input.term}</span> | { props.images.imagesArr.length } images found</div>
             { renderImages() } 
         </div>
     );

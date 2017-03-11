@@ -33,7 +33,8 @@ const initialState = {
     },
     home: true,
     input: {
-      text: ""
+      text: "",
+      term: ""
     }
 }
 

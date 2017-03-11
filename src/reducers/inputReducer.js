@@ -3,7 +3,7 @@ import actions from '../actions/index';
 export default (state={}, action) => {
   switch (action.type) {
     case actions.SET_VALUE: {
-        return {...state, text: action.payload};
+        return {...state, text: action.payload, term: action.payload};
     }
     case actions.ADD_CHAR: {
         return {...state, text: state.text + action.payload}
