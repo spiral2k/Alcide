@@ -1,11 +1,13 @@
 * {
   outline: none;
+  box-sizing: border-box;
 }
 
 body{
   padding: 0;
   margin: 0;
   font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .wrapper{
@@ -17,7 +19,7 @@ body{
 }
 
 .wrapper.sidebar-open{
-    animation: openSidebar .5s forwards;
+    animation: openSidebar .9s forwards;
 }
 
 .wrapper.sidebar-close{
@@ -46,4 +48,26 @@ body{
 .container{
   max-width:980px;
   margin: 0 auto;
+  transition: all 0.3s ease-out; 
+}
+
+.searching .container {
+    max-width:100%;
+}
+
+
+.searching .search-container{
+    margin-top: 0px;
+    background: #EFF0F1;
+    padding: 20px 0;
+}
+
+.searching .Typist {
+    margin-left: 30px;
+    color:#ff0089;
+    font-size: 24px;
+}
+
+.searching .footer{
+  padding: 20px 0;
 }

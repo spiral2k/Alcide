@@ -1,0 +1,10 @@
+{
+    "pixabay": {
+        "key": "4776862-96998f294d929c94c59a3d8e8",
+        "url": "https://pixabay.com/api/"
+    },
+    "flickr": {
+        "key": "8cd82974324628798232c0ccc7be6b06",
+        "secret": "f6b2d47acecaa39a"
+    }
+}

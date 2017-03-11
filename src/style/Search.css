@@ -2,12 +2,13 @@
     width:100%;
     margin-top: 100px;
     text-align: center;
+    transition: all 0.5s ease-out; 
 }
 
 .search-container input{
     width:50%;
-    height:40px;
-    line-height:40px;
+    height:44px;
+    line-height:44px;
     font-size:22px;
     border:2px solid #eee;
     padding:0 10px;
@@ -37,18 +38,39 @@
     }
 }
 
-
 .Typist {
     font-size: 50px;
-    margin-left: -100px;
+    margin-left: -80px;
     padding: 0 0 10px 0;
     display: inline-block;
     text-align: left;
     width: 50%;
     color: #ccc;
+    transition: all 0.5s ease-out; 
 }
 
 .Typist span{
     color: #83adf1;
     font-weight: bold;
+}
+
+.Typist span:last-of-type{
+    margin-left: 7px;
+}
+
+.back-home {
+    display: none;
+    float: right;
+    color: #b3b3b3;
+    margin: -10px 25px 0 0;
+    cursor: pointer;
+}
+
+.back-home:hover {
+    color:#7b7b7b;
+}
+
+
+.back-home.show {
+    display: block;
 }

@@ -1,0 +1,16 @@
+.images-grid{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    position: relative;
+    align-items: center;
+}
+
+.no-results{
+    font-size: 34px;
+    width: 100%;
+    margin-top: 55px;
+    text-align: center;
+    color: #ff0076;
+}

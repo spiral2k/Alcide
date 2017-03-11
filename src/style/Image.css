@@ -1,0 +1,13 @@
+.image {
+    padding: 5px;
+}
+
+.image img{
+    max-width: 150px;
+    transition: all 0.2s ease-out; 
+    cursor: pointer;
+}
+
+.image img:hover{
+    transform: rotate(1deg);
+}
